@@ -17,7 +17,7 @@ function _send_cmd_to_container() {
     _run_cmd "$cmd"
 }
 
-function link_node_modules() {
+function _link_node_modules() {
     if [ -d "$1/node_modules" ]; then
         _run_cmd "rm $1/node_modules"
     fi
