@@ -1,9 +1,3 @@
-function _run_cmd() {
-    local t=`date`
-    echo "log info: $t: $1"
-    eval $1
-}
-
 function _remove_container() {
     local container_name=$1
     local cmd="docker rm -f $container_name"
@@ -23,3 +17,4 @@ function _link_node_modules() {
     fi
     _run_cmd "ln -sf /opt/node_npm_data/node_modules $1"
 }
+
